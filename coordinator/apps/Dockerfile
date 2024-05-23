@@ -19,6 +19,8 @@ RUN mkdir -p ~/rapidsnark/build; \
 RUN wget -qO ~/circom https://github.com/iden3/circom/releases/download/v2.1.6/circom-linux-amd64; \
     chmod +x ~/circom; \
     mv ~/circom /bin
+RUN cd /maci/coordinator; pnpm run download-zkeys:test
+RUN cd /maci/coordinator; pnpm run generate-keypair
 
 USER node
 ARG PORT=8545
