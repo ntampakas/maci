@@ -28,4 +28,4 @@ COPY --chown=node:node  --from=builder /builder/ ./
 WORKDIR /maci/coordinator
 
 EXPOSE ${PORT}
-CMD ["pnpm", "run", "hardhat", "--hostname", "0.0.0.0"]
+CMD ["pnpm", "run", "start:prod"]
