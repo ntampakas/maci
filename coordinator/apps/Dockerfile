@@ -28,4 +28,4 @@ COPY --chown=node:node  --from=builder /builder/ ./
 WORKDIR /maci/coordinator
 
 EXPOSE ${PORT}
-CMD ["pnpm", "run", "start:prod"]
+CMD ["node", "build/ts/main.js"]
